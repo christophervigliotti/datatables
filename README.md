@@ -4,8 +4,7 @@ https://datatables.net
 
 ## Next Steps
 
-1. fix syntax error from refactoring, verify first two examples working, then...
-2. resume at "Objects" on page https://datatables.net/manual/data/
+1. resume at "Objects" on page https://datatables.net/manual/data/
 
 ## Overview
 

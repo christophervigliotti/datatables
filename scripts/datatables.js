@@ -27,7 +27,7 @@ function loadDatatable(){
             var data = [
                 {
                     "last_name": "McBoomerson",
-                    "first_name": "boomer",
+                    "first_name": "Boomer",
                     "email_address": "orange_cat@fake_email.address"
                 },
                 {
@@ -51,8 +51,8 @@ function loadDatatable(){
         break;
 
         default:
-            descriptionHtml = 'Invalid Example #.';
-    }
+            descriptionHtml = 'Invalid or missing example number specified.  Use "?example=1" format in URL.';
+   }
 
     consoleOutputArray.unshift(descriptionHtml);
     console.log(consoleOutputArray);
