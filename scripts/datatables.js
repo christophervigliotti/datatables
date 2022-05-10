@@ -4,19 +4,19 @@ $(document).ready( function () {
 
 function loadDatatable(){
 
-    // get the url param 'example_number'
+    // get the url param 'example'
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    var example_number = parseInt(urlParams.get('example_number'));
+    var example = parseInt(urlParams.get('example'));
     var descriptionHtml = "";
 
-    example_number = (example_number === null || example_number === undefined) ? 1 : example_number;       
-    descriptionHtml = "Example " + example_number + ": ";
+    example = (example === null || example === undefined) ? 1 : example;       
+    descriptionHtml = "Example " + example + ": ";
     consoleOutputArray = [];
 
     console.log(descriptionHtml);
 
-    switch(example_number){
+    switch(example){
 
         case 1:
             $('#theTable').DataTable();

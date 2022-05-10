@@ -1,7 +1,11 @@
 # Datatables
 
 https://datatables.net
-resume at "Objects" on page https://datatables.net/manual/data/
+
+## Next Steps
+
+1. fix syntax error from refactoring, verify first two examples working, then...
+2. resume at "Objects" on page https://datatables.net/manual/data/
 
 ## Overview
 
