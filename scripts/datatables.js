@@ -1,7 +1,9 @@
+// fire when ready
 $(document).ready( function () {
     loadDatatable();
 } );
 
+// updates #description with helpful text
 function drawDescription(exampleNumber,suffix){
     var descriptionHtml = "Example " + exampleNumber + ": " + suffix;
     $('#description').html(descriptionHtml);
@@ -41,11 +43,11 @@ function loadDatatable(){
             drawDescription(exampleNumber,"AJAX, flattening nested object data (and some options).");
             caseSix();
         break;
-        /*
         case 7:
-            drawDescription(exampleNumber,"TBD");
+            drawDescription(exampleNumber,"Using 'columnDefs'");
             caseSeven();
         break;
+        /*
         case 8:
             drawDescription(exampleNumber,"TBD");
             caseEight();
@@ -62,17 +64,24 @@ function loadDatatable(){
 
         // end default
    } // end switch
-} // end jquery ready
+} // end loadDatatables()
+
+function caseSeven(){
+    alert('Under construction.  Stay tuned!');
+}
 
 function caseSix(){
     $('#theTable').DataTable( 
         {
-            'processing':true, // <= what does this mean?
+            'processing':true, // <= https://datatables.net/reference/option/processing
             'ajax':'data/6.txt',
             paging:false,
             scrollY: 200,
             columns: [
-                {data: 'last_name'},
+                {
+                    title: 'LaSt NaMe', // <= change column header display name
+                    data: 'last_name'
+                },
                 {data: 'first_name'},
                 {data: 'email_addresses.primary'},
                 {
