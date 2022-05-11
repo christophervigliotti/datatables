@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "last_name": "Tolkein",
+            "first_name": "J.S.O.N.",
+            "email_address": "json_t@fake_email.address",
+            "date_added": "1/11/1991"
+        },
+        {
+            "last_name": "Sun",
+            "first_name": "Jay",
+            "email_address": "sun.jay@totally_legit_email.address",
+            "date_added": "2/22/1992"
+        }        
+    ]    
+}
