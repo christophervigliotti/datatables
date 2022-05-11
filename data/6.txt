@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "last_name": "McPoots",
+            "first_name": "Toots",
+            "email_addresses": {
+                "primary":"baltimore_blast@soccer.sports",
+                "secondary":"pffft@wat.wat"
+            },
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "Tootsie",
+            "first_name": "Poots",
+            "email_addresses": {
+                "primary":"blast_off@stupid_fart_jokes.au",
+                "secondary":"wat@wat.wat"
+            },
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        },
+        {
+            "last_name": "McRib",
+            "first_name": "Toots",
+            "email_addresses": {
+                "primary":"gasgasgas@institute.edu",
+                "secondary":"pffft@wat.wat"
+            },
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "McSlim",
+            "first_name": "Poots",
+            "email_addresses": {
+                "primary":"sdfer@stupid_fart_jokes.au",
+                "secondary":"wat@wat.wat"
+            },
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        },
+        {
+            "last_name": "McPootstuffs",
+            "first_name": "Toots",
+            "email_addresses": {
+                "primary":"rgrgbrg@institute.edu",
+                "secondary":"pffft@wat.wat"
+            },
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "Wiggum",
+            "first_name": "Poots",
+            "email_addresses": {
+                "primary":"thmthmthm@stupid_fart_jokes.au",
+                "secondary":"wat@wat.wat"
+            },
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        },
+        {
+            "last_name": "Morty",
+            "first_name": "Rick N.",
+            "email_addresses": {
+                "primary":"uyiiuyuiyu@institute.edu",
+                "secondary":"pffft@wat.wat"
+            },
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "Flotsam",
+            "first_name": "J. Jonah",
+            "email_addresses": {
+                "primary":"dfgdfgg@stupid_fart_jokes.au",
+                "secondary":"wat@wat.wat"
+            },
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        },
+        {
+            "last_name": "Vigliotti",
+            "first_name": "Angie",
+            "email_addresses": {
+                "primary":"ewrwer@institute.edu",
+                "secondary":"pffft@wat.wat"
+            },
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "Torpedo",
+            "first_name": "Tito",
+            "email_addresses": {
+                "primary":"asdad@stupid_fart_jokes.au",
+                "secondary":"wat@wat.wat"
+            },
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        }
+    ]
+}

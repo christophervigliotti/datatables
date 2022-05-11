@@ -34,33 +34,76 @@ function loadDatatable(){
             caseFour();
         break;
         case 5:
-            drawDescription(exampleNumber,"AJAX + specifying column order via {data: 0}, {data: 1}, etc.");
+            drawDescription(exampleNumber,"AJAX, specifying column order via {data: 0}, {data: 1}, etc.");
             caseFive();
         break;
+        case 6:
+            drawDescription(exampleNumber,"AJAX, flattening nested object data (and some options).");
+            caseSix();
+        break;
+        /*
+        case 7:
+            drawDescription(exampleNumber,"TBD");
+            caseSeven();
+        break;
+        case 8:
+            drawDescription(exampleNumber,"TBD");
+            caseEight();
+        break;
+        case 9:
+            drawDescription(exampleNumber,"TBD");
+            caseNine();
+        break;
+        */
+        // new example cases go here
         default:
-            $('#description').html('Invalid or missing exampleNumber specified.  Use "?exampleNumber=1" format in URL.');
+            $('#theTable').hide();
+            $('#description').html('Choose from one of the examples above.');
+
         // end default
    } // end switch
 } // end jquery ready
 
-
-// error https://datatables.net/manual/ajax << heading "Column Data Points"
-function caseFive(){
-    $('#theTable').DataTable( {
-        ajax: '/data/5.txt',
-        columns: [
-            {data: 0},
-            {data: 1},
-            {data: 2},
-            {data: 3}
-        ]
-    } );
+function caseSix(){
+    $('#theTable').DataTable( 
+        {
+            'processing':true, // <= what does this mean?
+            'ajax':'data/6.txt',
+            paging:false,
+            scrollY: 200,
+            columns: [
+                {data: 'last_name'},
+                {data: 'first_name'},
+                {data: 'email_addresses.primary'},
+                {
+                    data: 'date_added',
+                    render: 
+                    {
+                        _: 'display',
+                        sort: "timestamp"
+                    }
+                }
+            ]
+        } 
+    );    
 }
-
+function caseFive(){
+    $('#theTable').DataTable( 
+        {
+            'ajax':'data/5.txt',
+            columns: [
+                {data: 0},
+                {data: 2},
+                {data: 1},
+                {data: 3}
+            ]
+        } 
+    );
+}
 function caseFour(){
     $('#theTable').DataTable( {
         ajax: {
-            url: '/data/4.txt',
+            url: 'data/4.txt',
             dataSrc: 'data'
         },
         columns: [
@@ -71,15 +114,10 @@ function caseFour(){
         ]
     } );
 }
-
-/* 
-https://datatables.net/manual/data/orthogonal-data
-ERROR! DataTables warning: table id=theTable - Requested unknown parameter 'date_added' for row 0, column 3. For more information about this error, please see http://datatables.net/tn/4
-*/
 function caseThree(){
     var data = [
         {
-            "last_name": "McBoomerson",
+            "last_name": "3!McBoomerson",
             "first_name": "Boomer",
             "email_address": "orange_cat@fake_email.address",
             "date_added": {
@@ -88,7 +126,7 @@ function caseThree(){
             }
         },
         {
-            "last_name": "2Dot",
+            "last_name": "3!2Dot",
             "first_name": "Dot",
             "email_address": "smol_cat@totally_legit_email.address",
             "date_added": {
@@ -108,26 +146,24 @@ function caseThree(){
                     data: 'date_added',
                     render: 
                     {
-                        _: "date_added.display",
-                        sort: "date_added.timestamp"
+                        _: 'display',
+                        sort: "timestamp"
                     }
                 }
             ]
         }
     );
-    consoleOutputArray.push(data);
 }
-
 function caseTwo(){
     var data = [
         {
-            "last_name": "McBoomerson",
+            "last_name": "2!McBoomerson",
             "first_name": "Boomer",
             "email_address": "orange_cat@fake_email.address",
             "date_added": "1/11/1991"
         },
         {
-            "last_name": "2Dot",
+            "last_name": "2!Dot",
             "first_name": "Dot",
             "email_address": "smol_cat@totally_legit_email.address",
             "date_added": "2/22/1992"
@@ -144,5 +180,4 @@ function caseTwo(){
             ]
         }
     );
-    consoleOutputArray.push(data);
 }

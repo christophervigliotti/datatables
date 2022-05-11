@@ -1,6 +1,16 @@
-[    
-    "email_address": "json_t@fake_email.address",
-    "first_name": "J.S.O.N.",
-    "last_name": "Tolkein",
-    "date_added": "1/11/1991"
-]
+{
+    "data": [
+        [    
+            "Mom (5.txt)",
+            "stinky@your.mom",
+            "Your",
+            "1/11/1991"
+        ],    
+        [    
+            "Tolkein",
+            "json_t@fake_email.address",
+            "J.S.O.N.",
+            "12/11/1902"
+        ]    
+    ]
+}

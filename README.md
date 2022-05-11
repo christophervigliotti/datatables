@@ -2,13 +2,18 @@
 
 https://datatables.net
 
-## Next Steps
-
-1. resume at "Objects" on page https://datatables.net/manual/data/
-
 ## Overview
 
 Quick ramp-up on the datatables jQuery plugin
+
+## The Code
+
+* index.htm << just enough html to get up and running
+* scripts\datatables.js << my js code
+* data\4.txt << 'ajax' response for example 4
+* data\5.txt << 'ajax' response for example 5
+* data\6.txt << 'ajax' response for example 6
+* [index.htm](index.htm!)
 
 ## Setup
 
