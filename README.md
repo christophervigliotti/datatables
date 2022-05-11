@@ -13,7 +13,7 @@ Quick ramp-up on the datatables jQuery plugin
 * data\4.txt << 'ajax' response for example 4
 * data\5.txt << 'ajax' response for example 5
 * data\6.txt << 'ajax' response for example 6
-* [index.htm](index.htm!)
+* [https://github.com/christophervigliotti/datatables/blob/main/index.htm](index.htm)
 
 ## Setup
 
