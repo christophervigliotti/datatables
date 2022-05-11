@@ -14,6 +14,11 @@ Quick ramp-up on the datatables jQuery plugin
 * [data\5.txt](https://github.com/christophervigliotti/datatables/blob/main/data/5.txt) << 'ajax' response for example 5
 * [data\6.txt](https://github.com/christophervigliotti/datatables/blob/main/data/6.txt) << 'ajax' response for example 6
 
+## What's Complete
+
+See * [scripts\datatables.js](https://github.com/christophervigliotti/datatables/blob/main/scripts/datatables.js)
+
+
 ## What's Next
 
 * columnDefs

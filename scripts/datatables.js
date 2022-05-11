@@ -9,6 +9,142 @@ function drawDescription(exampleNumber,suffix){
     $('#description').html(descriptionHtml);
 }
 
+// wat
+function caseSeven(){
+    alert('Under construction.  Stay tuned!');
+}
+
+// AJAX, flattening nested object data (and some options).
+function caseSix(){
+    $('#theTable').DataTable( 
+        {
+            'processing':true, // <= https://datatables.net/reference/option/processing
+            'ajax':'data/6.txt',
+            paging:false,
+            scrollY: 200,
+            columns: [
+                {
+                    title: 'LaSt NaMe', // <= change column header display name
+                    data: 'last_name'
+                },
+                {data: 'first_name'},
+                {data: 'email_addresses.primary'},
+                {
+                    data: 'date_added',
+                    render: 
+                    {
+                        _: 'display',
+                        sort: "timestamp"
+                    }
+                }
+            ]
+        } 
+    );    
+}
+
+// AJAX, specifying column order via {data: 0}, {data: 1}, etc.
+function caseFive(){
+    $('#theTable').DataTable( 
+        {
+            'ajax':'data/5.txt',
+            columns: [
+                {data: 0},
+                {data: 2},
+                {data: 1},
+                {data: 3}
+            ]
+        } 
+    );
+}
+
+// Simple AJAX.
+function caseFour(){
+    $('#theTable').DataTable( {
+        ajax: {
+            url: 'data/4.txt',
+            dataSrc: 'data'
+        },
+        columns: [
+            {data: 'last_name'},
+            {data: 'first_name'},
+            {data: 'email_address'},
+            {data: 'date_added'}
+        ]
+    } );
+}
+
+// Defining sort-by logic for dates.
+function caseThree(){
+    var data = [
+        {
+            "last_name": "3!McBoomerson",
+            "first_name": "Boomer",
+            "email_address": "orange_cat@fake_email.address",
+            "date_added": {
+                "display": "1/11/1991",
+                "timestamp": "19910111"
+            }
+        },
+        {
+            "last_name": "3!2Dot",
+            "first_name": "Dot",
+            "email_address": "smol_cat@totally_legit_email.address",
+            "date_added": {
+                "display": "2/22/1992",
+                "timestamp": "19920222"
+            }
+        }
+    ];    
+    $('#theTable').DataTable(
+        {
+            data:data,
+            columns: [
+                {data: 'last_name'},
+                {data: 'first_name'},
+                {data: 'email_address'},
+                {
+                    data: 'date_added',
+                    render: 
+                    {
+                        _: 'display',
+                        sort: "timestamp"
+                    }
+                }
+            ]
+        }
+    );
+}
+
+// Feeding in object-based data.
+function caseTwo(){
+    var data = [
+        {
+            "last_name": "2!McBoomerson",
+            "first_name": "Boomer",
+            "email_address": "orange_cat@fake_email.address",
+            "date_added": "1/11/1991"
+        },
+        {
+            "last_name": "2!Dot",
+            "first_name": "Dot",
+            "email_address": "smol_cat@totally_legit_email.address",
+            "date_added": "2/22/1992"
+        }
+    ];
+    $('#theTable').DataTable(
+        {
+            data:data,
+            columns: [
+                {data: 'last_name'},
+                {data: 'first_name'},
+                {data: 'email_address'},
+                {data: 'date_added'}
+            ]
+        }
+    );
+}
+
+// loads the example specified in url param exampleNumber
 function loadDatatable(){
 
     // get the url param 'exampleNumber'
@@ -65,128 +201,3 @@ function loadDatatable(){
         // end default
    } // end switch
 } // end loadDatatables()
-
-function caseSeven(){
-    alert('Under construction.  Stay tuned!');
-}
-
-function caseSix(){
-    $('#theTable').DataTable( 
-        {
-            'processing':true, // <= https://datatables.net/reference/option/processing
-            'ajax':'data/6.txt',
-            paging:false,
-            scrollY: 200,
-            columns: [
-                {
-                    title: 'LaSt NaMe', // <= change column header display name
-                    data: 'last_name'
-                },
-                {data: 'first_name'},
-                {data: 'email_addresses.primary'},
-                {
-                    data: 'date_added',
-                    render: 
-                    {
-                        _: 'display',
-                        sort: "timestamp"
-                    }
-                }
-            ]
-        } 
-    );    
-}
-function caseFive(){
-    $('#theTable').DataTable( 
-        {
-            'ajax':'data/5.txt',
-            columns: [
-                {data: 0},
-                {data: 2},
-                {data: 1},
-                {data: 3}
-            ]
-        } 
-    );
-}
-function caseFour(){
-    $('#theTable').DataTable( {
-        ajax: {
-            url: 'data/4.txt',
-            dataSrc: 'data'
-        },
-        columns: [
-            {data: 'last_name'},
-            {data: 'first_name'},
-            {data: 'email_address'},
-            {data: 'date_added'}
-        ]
-    } );
-}
-function caseThree(){
-    var data = [
-        {
-            "last_name": "3!McBoomerson",
-            "first_name": "Boomer",
-            "email_address": "orange_cat@fake_email.address",
-            "date_added": {
-                "display": "1/11/1991",
-                "timestamp": "19910111"
-            }
-        },
-        {
-            "last_name": "3!2Dot",
-            "first_name": "Dot",
-            "email_address": "smol_cat@totally_legit_email.address",
-            "date_added": {
-                "display": "2/22/1992",
-                "timestamp": "19920222"
-            }
-        }
-    ];    
-    $('#theTable').DataTable(
-        {
-            data:data,
-            columns: [
-                {data: 'last_name'},
-                {data: 'first_name'},
-                {data: 'email_address'},
-                {
-                    data: 'date_added',
-                    render: 
-                    {
-                        _: 'display',
-                        sort: "timestamp"
-                    }
-                }
-            ]
-        }
-    );
-}
-function caseTwo(){
-    var data = [
-        {
-            "last_name": "2!McBoomerson",
-            "first_name": "Boomer",
-            "email_address": "orange_cat@fake_email.address",
-            "date_added": "1/11/1991"
-        },
-        {
-            "last_name": "2!Dot",
-            "first_name": "Dot",
-            "email_address": "smol_cat@totally_legit_email.address",
-            "date_added": "2/22/1992"
-        }
-    ];
-    $('#theTable').DataTable(
-        {
-            data:data,
-            columns: [
-                {data: 'last_name'},
-                {data: 'first_name'},
-                {data: 'email_address'},
-                {data: 'date_added'}
-            ]
-        }
-    );
-}
