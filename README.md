@@ -14,6 +14,15 @@ Quick ramp-up on the datatables jQuery plugin
 * [data\5.txt](https://github.com/christophervigliotti/datatables/blob/main/data/5.txt) << 'ajax' response for example 5
 * [data\6.txt](https://github.com/christophervigliotti/datatables/blob/main/data/6.txt) << 'ajax' response for example 6
 
+## What's Next
+
+* columnDefs
+  * with ajax
+  * dynamically show and hide groups of columns
+  * user configurable show/hide column feature (checkboxes)
+* add styles
+* add an "Actions" column with buttons "Edit" "Delete" (and make delete remove the row onclick) https://datatables.net/reference/button/
+
 ## Setup
 
 1. Include these two files 
