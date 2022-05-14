@@ -11,17 +11,29 @@
         -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-        <!-- Datatables -->
+        <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">            
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+        <!-- Buttons for DataTables -->
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
 
         <!-- my js -->
         <script src="/scripts/datatables.js"></script>
 
         <title>Datatables</title>
+
+        <style>
+            th {
+                text-align:left;
+            }
+            #responseDiv{
+                padding-bottom:10px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Datatables</h1>        
+        <h1>Datatables.net Examples</h1>        
         <div>
             <a href="?exampleNumber=1">1</a>
             &nbsp;|&nbsp;
@@ -34,6 +46,12 @@
             <a href="?exampleNumber=5">5</a>
             &nbsp;|&nbsp;
             <a href="?exampleNumber=6">6</a>
+            &nbsp;|&nbsp;
+            <a href="?exampleNumber=7">7</a>
+            &nbsp;|&nbsp;
+            <a href="?exampleNumber=8">8</a>
+            &nbsp;|&nbsp;
+            <a href="?exampleNumber=9">9</a>
             <!--
             &nbsp;|&nbsp;
             <a href="?exampleNumber=7">7</a>
@@ -44,31 +62,39 @@
             -->
         </div>
         <h2 id="description"></h2>
+        <div id="responseDiv">&nbsp;</div>
         <table id="theTable">
             <thead>
                 <tr>
                     <th>Last Name</th>
-                    <th>First Name</th>
+                    <th class="nosort">First Name</th>
                     <th>Email</th>
                     <th>Date Added</th>
                 </tr>
             </thead>
             <tbody>
-                <!--
                 <tr>
-                    <td>1!Smellypug</td>
+                    <td>Vigliotti</td>
                     <td>Sunshine</td>
                     <td>dog@fake.email</td>
-                    <td>12/31/1972</td>
+                    <td>12/31/2120</td>
                 </tr>
                 <tr>
-                    <td>1!Cat</td>
+                    <td>Vigliotti</td>
                     <td>Diablo</td>
-                    <td>dog@fake.email</td>
+                    <td>cat@fake.email</td>
                     <td>12/31/2002</td>
                 </tr>
-                -->
+                <tr>
+                    <td>Vigliotti</td>
+                    <td>Christopher</td>
+                    <td>me@chrisvig.com</td>
+                    <td>12/31/1972</td>
+                </tr>
             </tbody>
         </table>
+        <h2>The Code</h2>
+        <pre id="moreStuff"></pre>
+        <p>More excitement at <a href="https://datatables.net" target="_blank">https://datatables.net</a></p>
     </body>
 </html>
