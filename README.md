@@ -16,7 +16,7 @@ Quick ramp-up on the datatables jQuery plugin
 
 ## What's Complete
 
-See * [scripts\datatables.js](https://github.com/christophervigliotti/datatables/blob/main/scripts/datatables.js)
+See [scripts\datatables.js](https://github.com/christophervigliotti/datatables/blob/main/scripts/datatables.js)
 
 
 ## What's Next
